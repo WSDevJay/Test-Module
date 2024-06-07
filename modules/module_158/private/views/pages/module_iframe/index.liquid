@@ -3,11 +3,10 @@ slug: module_158/module_iframe/index
 response_headers: >
   {
     "X-Frame-Options": null,
-	"Content-Security-Policy": "frame-ancestors https://*.siteglide.com"
+    "Content-Security-Policy": "frame-ancestors https://*.siteglide.com"
   }
 authorization_policies:
-  - modules/siteglide_system/module_is_in_admin
-layout: modules/module_158/templates/1
+ - modules/siteglide_system/module_is_in_admin
 ---
 {% graphql data = "modules/module_158/properties/get_properties" %}
 <h1>All Properties</h1>
