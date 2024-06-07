@@ -1,17 +1,17 @@
 ---
-slug: module_72/module_iframe/add
+slug: module_158/module_iframe/add
 response_headers: >
   {
     "X-Frame-Options": null
   }
 authorization_policies:
   - modules/siteglide_system/module_is_in_admin
-layout: modules/module_72/templates/1
+layout: modules/module_158/templates/1
 ---
 <h1>Add new property</h1>
-<a class="btn btn-primary mb-4" href="/module_72/module_iframe/index?{% include "modules/siteglide_system/modules/auth" -%}">View all properties</a>
+<a class="btn btn-primary mb-4" href="/module_158/module_iframe/index?{% include "modules/siteglide_system/modules/auth" -%}">View all properties</a>
 
-{% graphql image_upload = "modules/module_72/properties/image_presign" %}
+{% graphql image_upload = "modules/module_158/properties/image_presign" %}
 {% assign data = image_upload.property_upload_presigned_url %}
 
 <form action="{{ data.upload_url }}" data-s3-uppy="form" hidden>
@@ -43,7 +43,7 @@ layout: modules/module_72/templates/1
       data[field[0]] = field[1];
     }
 
-    fetch('/module_72/module_iframe/api/add-item?{% include "modules/siteglide_system/modules/auth" -%}', {
+    fetch('/module_158/module_iframe/api/add-item?{% include "modules/siteglide_system/modules/auth" -%}', {
       credentials: "same-origin",
       method: "POST",
       body: JSON.stringify(data),
@@ -52,7 +52,7 @@ layout: modules/module_72/templates/1
       }
     }).then(() => {
       alert("New property added!");
-      window.location.href="/module_72/module_iframe/index?{% include 'modules/siteglide_system/modules/auth' -%}"
+      window.location.href="/module_158/module_iframe/index?{% include 'modules/siteglide_system/modules/auth' -%}"
     })
   };
   const Create = event => {
@@ -68,4 +68,4 @@ layout: modules/module_72/templates/1
 
 <link href="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.css" rel="stylesheet">
 <script src="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.js" defer></script>
-<script src="{{ 'modules/module_72/images.js' | asset_url }}" defer></script>
+<script src="{{ 'modules/module_158/images.js' | asset_url }}" defer></script>

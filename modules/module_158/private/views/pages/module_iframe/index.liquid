@@ -1,18 +1,18 @@
 ---
-slug: module_72/module_iframe/index
+slug: module_158/module_iframe/index
 response_headers: >
   {
     "X-Frame-Options": null
   }
 authorization_policies:
   - modules/siteglide_system/module_is_in_admin
-layout: modules/module_72/templates/1
+layout: modules/module_158/templates/1
 ---
-{% graphql data = "modules/module_72/properties/get_properties" %}
+{% graphql data = "modules/module_158/properties/get_properties" %}
 <h1>All Properties</h1>
 <div class="row justify-between">
 	<div class="col">
-		<a class="btn btn-primary" href="/module_72/module_iframe/add?{% include 'modules/siteglide_system/modules/auth' -%}">Add property</a>
+		<a class="btn btn-primary" href="/module_158/module_iframe/add?{% include 'modules/siteglide_system/modules/auth' -%}">Add property</a>
 	</div>
 	<div class="col text-end">
 		<a class="btn btn-primary" href="https://{{context.location.host}}/properties" target="_blank">View on site</a>
@@ -68,7 +68,7 @@ layout: modules/module_72/templates/1
 					{{item.created_at | date: "%e %B %Y"}}
 				</td>
 				<td>
-					<a class="btn btn-primary" href="/module_72/module_iframe/view/{{item.id}}?{% include "modules/siteglide_system/modules/auth" -%}">View</a>
+					<a class="btn btn-primary" href="/module_158/module_iframe/view/{{item.id}}?{% include "modules/siteglide_system/modules/auth" -%}">View</a>
 				</td>
 			</tr>
 		{% endfor -%}

@@ -1,11 +1,11 @@
 [
 	{
-		"id": 72,
+		"id": 158,
 		"type": "module",
 		"use_standard_fields": false,
 		"name": "Property Explorer",
 		"system_fields": {
-			"module_field_72_1": {
+			"module_field_158_1": {
 				"name": "Field Name",
 				"type": "input_text",
 				"live": true,

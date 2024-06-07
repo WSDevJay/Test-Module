@@ -7,7 +7,7 @@ mutation(
 ) {
 	record_create(
 		record:{
-			table: "modules/module_72/properties"
+			table: "modules/module_158/properties"
 			properties:[
 				{
 					name: "name",

@@ -8,7 +8,7 @@ query get_data(
 				value:$id
 			}
 			table:{
-				value:"modules/module_72/properties"
+				value:"modules/module_158/properties"
 			}
 		}
 	) {

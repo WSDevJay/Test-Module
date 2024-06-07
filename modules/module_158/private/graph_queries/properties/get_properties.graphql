@@ -3,7 +3,7 @@ query get_data {
 		per_page:20
 		filter:{
 			table:{
-				value:"modules/module_72/properties"
+				value:"modules/module_158/properties"
 			}
 		}
 		sort:[{
