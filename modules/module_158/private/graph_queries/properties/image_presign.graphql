@@ -1,6 +1,0 @@
-mutation presign {
-  property_upload_presigned_url(table: "modules/module_158/properties", property_name: "image") {
-      upload_url
-      upload_url_payload
-    }
-}

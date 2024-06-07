@@ -2,11 +2,35 @@
 	{
 		"id": 158,
 		"type": "module",
-		"use_standard_fields": false,
-		"name": "Property Explorer",
+		"slug": "module_158",
+		"detail": false,
+		"detail_template": "templates/blank_page",
+		"detail_default_layout": "default",
+		"sz": false,
+		"sz_updated": true,
+		"sz_display_type": "404",
+		"use_standard_fields": true,
 		"system_fields": {
 			"module_field_158_1": {
-				"name": "Field Name",
+				"name": "Title",
+				"type": "input_text",
+				"live": true,
+				"required": false
+			},
+			"module_field_158_2": {
+				"name": "Description",
+				"type": "textarea",
+				"live": true,
+				"required": false
+			},
+			"module_field_158_3": {
+				"name": "Image",
+				"type": "image",
+				"live": true,
+				"required": false
+			},
+			"module_field_158_4": {
+				"name": "Image Alt",
 				"type": "input_text",
 				"live": true,
 				"required": false
