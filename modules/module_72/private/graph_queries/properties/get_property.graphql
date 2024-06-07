@@ -1,0 +1,26 @@
+query get_data(
+	$id: ID!
+) {
+	data: records(
+		per_page:20
+		filter:{
+			id:{
+				value:$id
+			}
+			table:{
+				value:"modules/module_72/properties"
+			}
+		}
+	) {
+		results {
+			id
+			created_at
+			updated_at
+			properties
+			image: property_upload(name:"image") {
+				url
+				versions
+			}
+		}
+	}
+}

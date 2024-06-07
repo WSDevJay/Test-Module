@@ -1,0 +1,10 @@
+mutation(
+	$id:ID!
+){
+	data: record_delete(
+		id: $id
+		table: "modules/module_72/properties"
+	){
+		id
+	}
+}

@@ -1,0 +1,15 @@
+---
+slug: module_72/module_iframe/api/delete-item
+method: post
+response_headers: >
+  {
+    "X-Frame-Options": null
+  }
+authorization_policies:
+  - modules/siteglide_system/module_is_in_admin
+---
+{% parse_json data -%}
+{{context.post_params}}
+{% endparse_json -%}
+{% graphql delete_data = "modules/module_72/properties/delete_property", id: data.id %}
+{{delete_data}}

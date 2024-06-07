@@ -1,0 +1,37 @@
+mutation(
+	$name: String!
+	$location: String!
+	$bedrooms: String!
+	$bathrooms: String!
+	$image: String!
+) {
+	record_create(
+		record:{
+			table: "modules/module_72/properties"
+			properties:[
+				{
+					name: "name",
+					value: $name
+				},
+				{
+					name:"location"
+					value:$location
+				},
+				{
+					name:"bedrooms"
+					value:$bedrooms
+				},
+				{
+					name:"bathrooms"
+					value:$bathrooms
+				},
+				{
+					name: "image"
+					value: $image
+				}
+			]
+		}
+	){
+		id
+	}
+}

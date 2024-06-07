@@ -1,0 +1,32 @@
+query get_data {
+	data: records(
+		per_page:20
+		filter:{
+			table:{
+				value:"modules/module_72/properties"
+			}
+		}
+		sort:[{
+			id:{
+				order:DESC
+			}
+		}]
+	) {
+		current_page
+		per_page
+		total_entries
+		total_pages
+		has_next_page
+		has_previous_page
+		results {
+			id
+			created_at
+			updated_at
+			properties
+			image: property_upload(name:"image") {
+				url
+				versions
+			}
+		}
+	}
+}

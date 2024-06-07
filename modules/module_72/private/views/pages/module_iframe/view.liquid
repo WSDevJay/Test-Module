@@ -1,0 +1,37 @@
+---
+slug: module_72/module_iframe/view/:id
+response_headers: >
+  {
+    "X-Frame-Options": null
+  }
+authorization_policies:
+  - modules/siteglide_system/module_is_in_admin
+layout: modules/module_72/templates/1
+---
+{% graphql data = "modules/module_72/properties/get_property" id: context.params.id -%}
+{% assign data = data.data.results | first -%}
+<a class="btn btn-primary" href="/module_72/module_iframe/index?{% include 'modules/siteglide_system/modules/auth' -%}">Back to properties</a>
+<h1>Name: {{ data.properties.name }}</h1>
+<p>Location: {{data.properties.location}}</p>
+<p>No of Bedrooms: {{data.properties.bedrooms}}</p>
+<p>No of Bathrooms: {{data.properties.bathrooms}}</p>
+<p>Image: <img src="{{data.image.url}}" alt="{{item.properties.name}}" width="500" /></p>
+<a class="btn btn-danger" onclick="deleteItem()">Delete property</a>
+
+<script>
+	function deleteItem(){
+		if (window.confirm("Are you sure you want to delete {{data.properties.name}}?")) {
+			let body = {id: {{context.params.id}}};
+			fetch('/module_72/module_iframe/api/delete-item?{% include "modules/siteglide_system/modules/auth" -%}', {
+				credentials: "same-origin", // make sure safari understands what we are doing
+				method: "POST",
+				body: JSON.stringify(body),
+				headers: {
+					SEC_FETCH_DEST: 'iframe'
+				}
+			}).then(() => {
+				window.location.href="/module_72/module_iframe/index?{% include 'modules/siteglide_system/modules/auth' -%}"
+			});
+		};
+	};
+</script>
